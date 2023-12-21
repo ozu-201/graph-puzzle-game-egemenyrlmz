@@ -6,30 +6,24 @@
 #define GRAPH_PUZZLE_GAME_EGEMENYRLMZ_GRAPH_H
 
 
+//#include <rpcndr.h>
 #include "EdgeList.h"
-#include "../../General/AbstractGraph.h"
 
-namespace list {
 
-    class Graph : public AbstractGraph{
+    class Graph{
     private:
+        int vertexCount;
         EdgeList *edges;
     public:
         explicit Graph(int vertexCount);
         ~Graph();
         void addEdge(int from, int to);
         void addEdge(int from, int to, int weight);
-        void connectedComponentsDisjointSet();
-        Path* bellmanFord(int source);
-        Path* dijkstra(int source);
-        void prim();
-    protected:
-        void depthFirstSearch(bool* visited, int fromNode) override;
-        void breadthFirstSearch(bool* visited, int startNode) override;
-        Edge* edgeList(int& edgeCount) override;
+        void breadthFirstSearch(bool* visited, int startNode);
+        int connectedComponentsBfs();
     };
 
-}
+
 
 
 #endif //GRAPH_PUZZLE_GAME_EGEMENYRLMZ_GRAPH_H
