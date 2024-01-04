@@ -5,9 +5,9 @@
 #include <fstream>
 #include "Graph.h"
 
-static bool isOneLetterApart(std::string word1, std::string word2);
+//static bool isOneLetterApart(std::string word1, std::string word2);
 
-int main() {
+/*int main() {
     std::ifstream inputFile("C:/Users/TEMP.OZUN/Desktop/dict.txt");
     if(!inputFile.is_open())
         std::cerr << "Error opening file!"<< std::endl;
@@ -67,3 +67,4 @@ static bool isOneLetterApart(std::string word1, std::string word2){
     }
     return differences == 1;
 }
+*/
